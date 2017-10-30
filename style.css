@@ -1,0 +1,38 @@
+h2 {
+    font-family: Trebuchet MS;
+}
+
+
+.box-scale {
+    width: 200px;
+    height: 200px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    text-align: center;
+    position: relative;
+    margin: 20px 10px;
+    z-index: 9;  
+}
+
+.box-scale::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out; 
+    z-index: -1;
+}
+
+.box-scale:hover::before {
+    transform: scale(1.05,1.05);
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.box-scale-container {
+    display: flex;    
+}
+
